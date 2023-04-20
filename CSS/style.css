@@ -1,0 +1,414 @@
+/* Wildcard */
+* {
+    /* police utilisée, police de secours */
+    font-family: 'Raleway', sans-serif; 
+    /* défini comment on mesure une box*/
+    box-sizing: border-box; 
+    /* initialise margin et padding */
+    margin: 0rem;
+    padding: 0rem;
+}
+
+/* Variables */
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+/* General */
+body {
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+a{
+    text-decoration:none;
+    color: inherit;
+}
+li{
+    color: inherit;
+    list-style-type: none;
+}
+.main-container {
+    width: 100%;
+    margin: 0 auto; /* Pour que le contenu de ma page soit toujours centrer dans l'affichage */
+    max-width: 1440px;
+    padding: 0 50px;
+}
+.fa-solid {
+    color: var(--main-color);
+}
+
+.section-title {
+    margin: 0;
+    font-size: 1.375rem;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutralStar {
+    color: var(--main-bg-color)
+}
+
+/* Entête du site contenant le logo et la navbar */
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    padding-top: 25px;    
+}
+img#logo{
+    height: 2.20rem;   
+}
+
+/* Menu */
+ul.menu{
+    display: flex;
+    font-weight: 500;
+}
+ul.menu:hover{
+    font-weight: 500;
+}
+li.lodging, li.activities{
+    width: 150px;
+    text-align: center;
+    padding-top: 35px;
+}
+
+li.lodging:hover, li.activities:hover, li.lodging:focus, li.activities:focus, li.lodging:active, li.activities:active{
+    border-top: 3px solid var(--main-color);;
+    color: var(--main-color);  
+}
+
+/* Présentation du site */
+.intro {
+    padding-top: 30px;
+}
+.intro h1 {
+    font-size: 1.38rem;
+    font-weight: bold;
+    margin: 0;
+}
+.intro p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+form {
+    display: flex;
+    height: 49px;
+    align-items: center;
+    margin-top: 0;
+}
+input {
+    position: relative;
+    padding: 9px;
+    width: 200px;
+    border: 1px solid var(--main-bg-color);
+    color: inherit;
+    font-weight: bold;
+    font-size: 1rem;
+}
+/* Pour Enlever la bordure du champs de saisie, je ne l'active pas pour une question d'accessibilité 
+
+input:focus{
+    outline: none;
+}
+*/
+
+/* Mise en forme du bouton rechercher desktop*/
+.search_button {
+    background-color: var(--main-color);
+    color: white;
+    width: 100px;
+    border: none;
+    border-radius: 0px 10px 10px 0px;
+    padding: 11px 0px 11px 0px;
+    font-weight: bold;
+    font-size: 14px;
+    
+}
+/* Cacher le bouton rechercher  mobile*/
+.search_button_mobile {
+    display: none;
+    background-color:transparent;
+    border: none;
+}
+
+.search_button:hover, .search_button:focus {
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+/* Icône barre de recherche */
+.fa-location-dot {
+    font-size: 1rem; /* Dimensionnement de l'icône "localisation" */
+    color: inherit;
+    border: 1px solid var(--main-bg-color);
+    background-color: var(--main-bg-color);
+    padding: 11px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.fa-magnifying-glass {
+    position: relative;
+    left: -10px;
+    font-size: 1rem; /* Dimensionnement de l'icône "localisation" */
+    color: var(--main-bg-color);
+    background-color: var(--main-color);
+    padding: 11px;
+    border:1px solid var(--main-color);
+    border-radius: 10px;
+}
+
+/* Les filtres */
+.filters_bar{
+    padding-top: 30px;
+    display: flex;
+    font-weight: bold;
+    font-size: 1rem;
+    column-gap: 20px;
+}
+.filters_title{
+    padding-top: 13px;
+}
+.filters_type {
+    display: flex;
+}
+.filter{
+    display: flex;
+    margin-left: 40px;
+    padding:10px;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 2rem;
+}
+.filter i{
+    padding-right: 10px;
+}
+
+.filter:hover, .filter:focus, .filter:active{
+    background-color: var(--filter-bg-color);
+    cursor: pointer;
+}
+
+/* Informations */
+.fa-info {
+    color: #0065FC;
+    border: 2px solid #F2F2F2;
+    border-radius: 50%;
+    font-size: 0.75rem;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 8px;
+    width: 25px;
+    height: 25px;
+}
+.info{
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+.text_info{
+    padding-top: 4px;
+    padding-left: 3px;
+    font-size: 16px;
+    }
+
+/* Résultats de recherches */
+.lodging_result {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.lodging_result section {
+    background-color: var(--main-bg-color);
+    border-radius: 1.25rem;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/* Résultats Classiques */
+.result_clas {
+    width: 65%;
+}
+
+.result_clas p{
+    font-size: 0.8rem;
+    padding: 5px 0px 5px 0px;
+}
+.cards_clas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 30px;
+}
+
+.cards_clas .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+}
+
+.cards_clas img {
+    border-radius:20px 20px 0px 0px;
+    width: 100%;
+    height: 124px;
+}
+
+.cards_clas .card-content{
+    padding-left: 10px;
+}
+
+.more h4{
+    padding-top: 30px;
+}
+
+
+.more:hover {
+    color: var(--main-color);
+}
+
+/* Résultats Populaires */
+.result_pop {
+    width: 32%;
+}
+
+.pop_title {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+.cards_pop {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.cards_pop .card a {
+    display: flex;
+    flex-direction: row;
+}
+
+.cards_pop img {
+    width: 8vw;
+    height: 134px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.cards_pop .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10px;
+}
+
+.result_pop p{
+    font-size: 0.8rem;
+    padding: 5px 0px 5px 0px;
+}
+
+/* Activités de la ville recherchée */
+
+.activities_result h2{
+    padding-top: 30px;
+    padding-left: 25px;
+}
+
+.activities_result {
+    padding-bottom: 35px;
+}
+.cards_activities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cards_activities .card {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 33px;
+    width: 22%;
+    height: 33vw;
+}
+
+.cards_activities .card a{
+    height: 33vw;
+    
+}
+
+.cards_activities img {
+    width: 100%;
+    height: 28vw;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.cards_activities .card-content {
+    padding-left: 5px;
+}
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background-color: var(--main-bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.list {
+    flex: 1;
+}
+
+.list ul {
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    margin: 1vw;
+}
+
+.list-title {
+    font-weight: bold;
+}
+
+.list a:hover{
+    color: var(--main-color);
+}
+
+.credit {
+    display: flex;
+    justify-content: center;
+}
