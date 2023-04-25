@@ -348,6 +348,7 @@ input:focus{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0px 20px;
 }
 
 .cards_activities .card {
@@ -406,9 +407,4 @@ input:focus{
 
 .list a:hover{
     color: var(--main-color);
-}
-
-.credit {
-    display: flex;
-    justify-content: center;
 }

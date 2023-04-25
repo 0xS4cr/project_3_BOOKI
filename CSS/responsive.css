@@ -39,13 +39,13 @@
 }
 
 /* Responsive Smartphone */
-@media (max-width: 768px) {
+@media (max-width: 767.98px) {
     /* Disposition du logo et du menu */
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 0px -50px;
+        margin: 0px;
     }
 
     nav{
@@ -67,11 +67,15 @@
 
     .main-container{
         padding: 0px;
-        margin: 0px;
+        margin: 0px auto;
     }
 
     .intro {
         padding: 0px 25px;
+    }
+
+    .intro h1 {
+        padding-top: 35px;
     }
 
     /* Barre de recherche */
@@ -146,7 +150,8 @@
         padding: 0px 25px 25px 25px;
     }
     .cards_activities {
-        flex-direction: column;;
+        flex-direction: column;
+        padding: 5px;
     }
 
     .cards_activities .card {
